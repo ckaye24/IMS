@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'Horizon';
+    src: url('fonts/Horizon.woff2') format('woff2'),
+         url('fonts/Horizon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    
+}
+body { 
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding-top: 60px; /* This should be equal to or greater than the height of the header */
+    margin: 0;
+    background-color:#001c39;
+    color: #ecf0f1;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#001c39;
+    height: 90px;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays above other content */
+}
+
+.my_logo {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    padding: 0 80px;
+    font-family: 'Horizon', sans-serif;
+}   
+
+.my_logo img {
+    max-height: 110px; /* Make logo responsive: maximum height */
+    width: 130px; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+/* Responsive adjustments for the logo image */
+@media(max-width: 750px) {
+    /* Adjust the logo image */
+    .my_logo img {
+        max-height: 80px; /* Adjust logo height for mobile view */
+        width: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media(max-width: 480px) {
+    /* Further adjust logo for very small screens (e.g., mobile phones) */
+    .my_logo img {
+        max-height: 60px; /* Make logo smaller for very small screens */
+    }
+}
+
+nav ul{
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 90px;
+    margin: 0 10px;
+}
+
+nav ul li a{
+    font-size: 12px;
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover{
+    color: #FFB800;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+.checkbtn{
+    float: right;
+    color:rgb(255, 255, 255);
+    line-height: 60px;
+    font-size: 25px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width:750px){
+
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        
+        position: fixed;
+        background-color: #001c39;
+        width:100%;
+        height: 100vh;
+        top: 60px;
+        text-align: center;
+        left: -100%;
+        transition: all 0.5s;
+    }
+
+    nav ul li{
+        display: block; 
+    }
+
+    #check:checked~ul{
+        left: 0px;
+    }
+
+}
+
+.logout {
+  
+    box-sizing: border-box;
+    border: 1px solid #FFB800; 
+    padding: 5px 10px; 
+    border-radius: 15px; 
+    color: rgb(255, 255, 255); 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.logout:hover {
+    background-color: #FFB800; 
+    border-color: rgb(0, 0, 0); 
+    color: white;
+}
+
+
+
+/* Target the span element that wraps the word "Notifications" */
+.highlight {
+    color: #f39c12; /* Yellow color for "Notifications" */
+}
+
+/* Style the rest of the <h1> (Inventory) to be white */
+h1 {
+    text-align: center;
+    color: #fff;  /* White color for the rest of the text (Inventory) */
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+
+.title{
+    margin-top: 30px;
+}
+
+.notif {
+    display: flex;
+    flex-direction: column;  /* Stack notifications vertically */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;  /* Spacing between notification boxes */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.notification-box {
+    background-color: rgba(44, 62, 80, 0.9);  /* Dark blue with some transparency */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;  /* Add smooth transition */
+    position: relative;
+}
+
+/* Hover effects */
+.notification-box:hover {
+    transform: scale(1.05);  /* Slightly enlarge on hover */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);  /* Increase the shadow */
+    background-color: rgba(255, 255, 255, 0.2);  /* Whitish transparent background */
+}
+
+/* Different background colors for low stock and overstock */
+.notification-box.low-stock {
+    background-color: rgba(243, 156, 18, 0.9);  /* Yellow with transparency for low stock */
+}
+
+.notification-box.overstock {
+    background-color: rgba(231, 76, 60, 0.9);  /* Red with transparency for overstock */
+}
+
+/* Optional: Add a subtle white glow effect when hovered */
+.notification-box:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);  /* Light whitish glow */
+    border-radius: 8px;
+    transform: translate(-50%, -50%);  /* Center the glow effect */
+    z-index: -1;  /* Ensure the glow is behind the box */
+}
+
+/* Close button styles */
+.notification-box .close-btn {
+    align-self: flex-end;
+    background: none;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+.notification-box .close-btn:hover {
+    color: #bdc3c7;
+}
+
+/* Optional: Smooth transitions for text */
+.notification-box h2 {
+    transition: color 0.3s ease;
+}
+
+.notification-box:hover h2 {
+    color: #ecf0f1; /* Lighten the heading text on hover */
+}
+
+.notification-box p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
+
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .notification-box {
+        width: 90%;  /* Make the boxes responsive on smaller screens */
+    }
+}

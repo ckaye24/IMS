@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #001c39;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* Use relative width */
+    max-width: 600px; /* Set a maximum width */
+}
+
+.picture {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Make height responsive */
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    background-image: url('Images/LOGO HOMEPAGE.png'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center the image */
+    border-radius: 10px; /* Optional: add some rounded corners */
+}
+
+.button-container {
+    margin-top: 20px; /* Adjust margin for spacing */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 15px;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%; /* Make button full width */
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FFB800;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .picture {
+        aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    }
+
+    button {
+        font-size: 14px; /* Slightly smaller button font size */
+        padding: 8px; /* Reduced padding for buttons */
+    }
+
+    .container {
+        width: 95%; /* Slightly wider for small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    button {
+        font-size: 12px; /* Further adjust button size for very small screens */
+        padding: 6px; /* Further reduce button padding */
+    }
+
+    .picture {
+        aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    }
+
+    body {
+        flex-direction: column; /* Stack elements vertically on very small screens */
+        justify-content: flex-start; /* Align items at the start */
+        align-items: center; /* Center items horizontally */
+    }
+}

@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'Horizon';
+    src: url('fonts/Horizon.woff2') format('woff2'),
+         url('fonts/Horizon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    
+}
+body { 
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding-top: 60px; /* This should be equal to or greater than the height of the header */
+    margin: 0;
+    background-color:#001c39;
+    
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#001c39;
+    height: 90px;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays above other content */
+}
+
+.my_logo {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    padding: 0 80px;
+    font-family: 'Horizon', sans-serif;
+}   
+
+.my_logo img {
+    max-height: 110px; /* Make logo responsive: maximum height */
+    width: 130px; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+/* Responsive adjustments for the logo image */
+@media(max-width: 750px) {
+    /* Adjust the logo image */
+    .my_logo img {
+        max-height: 80px; /* Adjust logo height for mobile view */
+        width: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media(max-width: 480px) {
+    /* Further adjust logo for very small screens (e.g., mobile phones) */
+    .my_logo img {
+        max-height: 60px; /* Make logo smaller for very small screens */
+    }
+}
+nav ul{
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 90px;
+    margin: 0 10px;
+}
+
+nav ul li a{
+    font-size: 12px;
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover{
+    color: #FFB800;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+.checkbtn{
+    float: right;
+    color:rgb(255, 255, 255);
+    line-height: 60px;
+    font-size: 25px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width:750px){
+
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        
+        position: fixed;
+        background-color: #001c39;
+        width:100%;
+        height: 100vh;
+        top: 60px;
+        text-align: center;
+        left: -100%;
+        transition: all 0.5s;
+    }
+
+    nav ul li{
+        display: block; 
+    }
+
+    #check:checked~ul{
+        left: 0px;
+    }
+
+}
+
+.logout {
+  
+    box-sizing: border-box;
+    border: 1px solid #FFB800; 
+    padding: 5px 10px; 
+    border-radius: 15px; 
+    color: rgb(255, 255, 255); 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.logout:hover {
+    background-color: #FFB800; 
+    border-color: rgb(0, 0, 0); 
+    color: white;
+}
+
+
+.ad_dash{
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    
+}
+.ad_dash h1 .black{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold; /* Makes headings stand out */
+}
+
+.ad_dash h1 .red{
+    color: #FFB800;
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold; /* Makes headings stand out */
+}
+
+.container{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: block;
+    background-color: #ffffff5b;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    width: 200px;
+    margin: 20px;
+    transition: transform 0.2s;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0  #F57C00;
+    transform: scale(1.05); /* Slightly increases the size */
+    transition: transform 0.3s ease; /* Smooth transition */
+
+}
+.user-icon {
+    padding: 20px;
+    font-size: 36px;
+    color:  #FFB800; /* Set icon color to white */
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; /* Create a black outline effect */
+}
+
+.card h3{
+    color: black;
+    font-family: 'Horizon', sans-serif;
+}
+

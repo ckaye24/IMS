@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #001c39;
+    color: white;
+}
+
+.input_design {
+    padding: 5px;
+}
+
+.my_form {
+    background-color: #001c39;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    margin-top: 190px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 2px solid #ffffff71; 
+    padding: 20px; /* Add padding for inner spacing */
+}
+
+.my_form h2 {
+    color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    font-family: 'Horizon', sans-serif;
+    font-weight: 900;
+}
+
+.input_design label {
+    width: 100px;
+    display: inline-block;
+}
+
+input[type='text'], input[type='password'] {
+    padding: 10px; /* Increase padding for touch targets */
+    background-color: #c4c9ce;
+    resize: vertical;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: calc(100% - 20px); /* Make inputs responsive */
+}
+
+input[type='submit'] {
+    border: 2px solid #ffffff71; 
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px; /* Increase padding */
+    border-radius: 15%;
+    background-color: #001c39;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%; /* Full width for the button */
+}
+
+input[type='submit']:hover {
+    background-color: #FFB800;
+    color: rgb(0, 0, 0);
+}
+
+.my_form .acc {
+    padding: 10px;
+    text-align: center; 
+    font-family: 'Quicksand', sans-serif;
+}
+
+.my_form .acc p {
+    color: #ffffff;
+}
+
+.my_form .acc a {
+    color: #ffffff; 
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Horizon', sans-serif;
+}
+
+.my_form .acc a:hover {
+    color: rgb(255, 255, 255); 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .my_form {
+        width: 80%;
+        margin-top: 50px; /* Reduce top margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .my_form {
+        width: 90%;
+        margin-top: 20px; /* Reduce top margin further */
+        padding: 15px; /* Adjust inner padding */
+    }
+
+    .input_design label {
+        font-size: 14px; 
+    }
+
+    input[type='text'], input[type='password'], input[type='submit'] {
+        font-size: 14px; 
+        padding: 10px; /* Consistent padding */
+    }
+}

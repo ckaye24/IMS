@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'Horizon';
+    src: url('fonts/Horizon.woff2') format('woff2'),
+         url('fonts/Horizon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    
+}
+body { 
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding-top: 60px; /* This should be equal to or greater than the height of the header */
+    margin: 0;
+    background-color:#001c39;
+    
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#001c39;
+    height: 90px;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays above other content */
+}
+
+.my_logo {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    padding: 0 80px;
+    font-family: 'Horizon', sans-serif;
+}   
+
+.my_logo img {
+    max-height: 110px; /* Make logo responsive: maximum height */
+    width: 130px; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+/* Responsive adjustments for the logo image */
+@media(max-width: 750px) {
+    /* Adjust the logo image */
+    .my_logo img {
+        max-height: 80px; /* Adjust logo height for mobile view */
+        width: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media(max-width: 480px) {
+    /* Further adjust logo for very small screens (e.g., mobile phones) */
+    .my_logo img {
+        max-height: 60px; /* Make logo smaller for very small screens */
+    }
+}
+
+nav ul{
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 90px;
+    margin: 0 10px;
+}
+
+nav ul li a{
+    font-size: 12px;
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+nav ul li a:hover{
+    color: #FFB800;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+.checkbtn{
+    float: right;
+    color:rgb(255, 255, 255);
+    line-height: 60px;
+    font-size: 25px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width:750px){
+
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        
+        position: fixed;
+        background-color: #001c39;
+        width:100%;
+        height: 100vh;
+        top: 60px;
+        text-align: center;
+        left: -100%;
+        transition: all 0.5s;
+    }
+
+    nav ul li{
+        display: block; 
+    }
+
+    #check:checked~ul{
+        left: 0px;
+    }
+
+}
+
+.logout {
+  
+    box-sizing: border-box;
+    border: 1px solid #FFB800; 
+    padding: 5px 10px; 
+    border-radius: 15px; 
+    color: rgb(255, 255, 255); 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.logout:hover {
+    background-color: #FFB800; 
+    border-color: rgb(0, 0, 0); 
+    color: white;
+}
+
+
+.info {
+    margin-top: 25px;
+    padding: 10px;
+    text-align: center; /* Center the content */
+}
+
+.info h1 {
+    color: #ffffff;
+    font-size: 25px; /* Default font size */
+    margin: 20px 0; /* Space around the heading */
+}
+
+/* Search Bar Styles */
+.search_bar {
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: center; /* Center the contents */
+    margin: 20px 0;
+}
+
+.search_bar input[type="text"] {
+    width: auto; /* Allow input to take only necessary width */
+    max-width: 300px; /* Limit maximum width */
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #001aff00;
+    color: white;
+    margin-right: 5px; /* Space between input and button */
+}
+
+.search_bar input[type="text"]:hover {
+    border: 1px solid #FFB800;
+}
+
+.search_bar input[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    background-color: #001aff93; /* Submit button color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search_bar input[type="submit"]:hover {
+    background-color: #FFB800; /* Darker background on hover */
+    color: black;
+}
+
+/* Table Styles */
+table {
+    background-color: rgba(255, 255, 255, 0.479);
+    text-align: center;
+    margin: 0 auto; /* This centers the table */
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid #3a506b;
+    color: rgb(0, 0, 0);
+}
+
+td {
+    border: 2px solid #3a506b;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.del_btn {
+    background: rgb(240, 71, 71);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.upd_btn {
+    background: rgb(31, 15, 255);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .info h1 {
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
+    }
+
+    .search_bar {
+        flex-direction: column; /* Stack inputs on smaller screens */
+        align-items: center; /* Center the items */
+    }
+
+    .search_bar input[type="text"],
+    .search_bar input[type="submit"] {
+        width: 90%; /* Make inputs wider on small screens */
+        max-width: none; /* Remove max width for smaller screens */
+        margin: 5px 0; /* Add spacing between inputs */
+    }
+}

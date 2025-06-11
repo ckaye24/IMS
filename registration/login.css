@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Horizon', sans-serif;
+    background-color:  #001c39;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.my_form {
+    background-color:transparent;
+    width: 300px;
+    max-width: 400px;   
+    margin: auto;
+    text-align: center;
+    box-shadow: 2px 4px 8px rgb(255, 242, 242);
+    border-radius: 10px;
+    padding: 20px; 
+    position: relative;
+    overflow: hidden;
+}
+
+
+h2 {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px;
+    font-family: 'Horizon', sans-serif;
+    margin-bottom: 20px;
+
+}
+
+.input_design {
+    position: relative;
+    margin-bottom: 15px;
+    
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+    color: black;
+    background-color:rgb(255, 255, 255);
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.438) ; 
+    border-radius: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+
+input:hover{
+        
+    border-color: #790000;
+}
+
+input:focus {
+    border-color: rgb(0, 0, 0)
+}
+
+.floating-label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s;
+    color: #aaa;
+    pointer-events: none;
+    background-color:rgb(255, 255, 255);
+    padding: 0 4px; /* Padding for better spacing */
+}
+
+input:focus + .floating-label,
+input:not(:placeholder-shown) + .floating-label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #000000;
+}
+
+.login {
+    text-align: center;
+}
+
+input[type="submit"] {
+    color: #FFB800;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Horizon', sans-serif;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+   color: rgb(255, 255, 255);
+}
+
